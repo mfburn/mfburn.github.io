@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MFBURN - Game Developer</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap');
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         :root {
             --bg-primary: #0a0a0a;
             --bg-secondary: #1a1a1a;
@@ -23,7 +24,7 @@
             --text-secondary: #cccccc;
             --text-muted: #888888;
         }
-        
+
         body {
             background: var(--bg-primary);
             color: var(--text-primary);
@@ -31,27 +32,33 @@
             line-height: 1.6;
             overflow-x: hidden;
         }
-        
+
         /* Glitch Animation */
         @keyframes glitch {
             0% {
                 text-shadow: 0.05em 0 0 var(--accent-cyan), -0.05em -0.025em 0 var(--accent-purple), 0.025em 0.05em 0 var(--accent-green);
             }
+
             15% {
                 text-shadow: 0.05em 0 0 var(--accent-cyan), -0.05em -0.025em 0 var(--accent-purple), 0.025em 0.05em 0 var(--accent-green);
             }
+
             16% {
                 text-shadow: -0.05em -0.025em 0 var(--accent-cyan), 0.025em 0.025em 0 var(--accent-purple), -0.05em -0.05em 0 var(--accent-green);
             }
+
             49% {
                 text-shadow: -0.05em -0.025em 0 var(--accent-cyan), 0.025em 0.025em 0 var(--accent-purple), -0.05em -0.05em 0 var(--accent-green);
             }
+
             50% {
                 text-shadow: 0.025em 0.05em 0 var(--accent-cyan), 0.05em 0 0 var(--accent-purple), 0 -0.05em 0 var(--accent-green);
             }
+
             99% {
                 text-shadow: 0.025em 0.05em 0 var(--accent-cyan), 0.05em 0 0 var(--accent-purple), 0 -0.05em 0 var(--accent-green);
             }
+
             100% {
                 text-shadow: -0.025em 0 0 var(--accent-cyan), -0.025em -0.025em 0 var(--accent-purple), -0.025em -0.05em 0 var(--accent-green);
             }
@@ -61,16 +68,31 @@
             0% {
                 background-position: 0 0;
             }
+
             100% {
                 background-position: 0 10px;
             }
         }
 
         @keyframes flicker {
-            0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+
+            0%,
+            19.999%,
+            22%,
+            62.999%,
+            64%,
+            64.999%,
+            70%,
+            100% {
                 opacity: 1;
             }
-            20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+
+            20%,
+            21.999%,
+            63%,
+            63.999%,
+            65%,
+            69.999% {
                 opacity: 0.4;
             }
         }
@@ -101,14 +123,12 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: 
-                repeating-linear-gradient(
-                    90deg,
+            background:
+                repeating-linear-gradient(90deg,
                     transparent,
                     transparent 2px,
                     rgba(0, 255, 255, 0.03) 2px,
-                    rgba(0, 255, 255, 0.03) 4px
-                );
+                    rgba(0, 255, 255, 0.03) 4px);
             animation: scan-lines 0.1s linear infinite;
         }
 
@@ -308,6 +328,11 @@
             margin: 0 auto;
         }
 
+        .telegram-link {
+            color: 0088cc;
+             text-decoration: none;
+        }
+
         .contact-info {
             margin-bottom: 30px;
         }
@@ -351,16 +376,16 @@
                 flex-direction: column;
                 gap: 10px;
             }
-            
+
             .games-grid {
                 grid-template-columns: 1fr;
                 gap: 30px;
             }
-            
+
             .game-links {
                 justify-content: center;
             }
-            
+
             .social-links {
                 flex-wrap: wrap;
             }
@@ -370,7 +395,7 @@
             .container {
                 padding: 0 15px;
             }
-            
+
             .game-card {
                 padding: 20px;
             }
@@ -378,8 +403,16 @@
 
         /* Terminal cursor animation */
         @keyframes blink {
-            0%, 50% { opacity: 1; }
-            51%, 100% { opacity: 0; }
+
+            0%,
+            50% {
+                opacity: 1;
+            }
+
+            51%,
+            100% {
+                opacity: 0;
+            }
         }
 
         .cursor {
@@ -387,6 +420,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav>
         <ul class="nav-menu">
@@ -412,12 +446,16 @@
                     <div class="game-image"></div>
                     <h3 class="game-title">МЕТАЛЛОИСКАИТЕЛЬ В ЧЕРНОБЫЛЕ</h3>
                     <p class="game-description">
-                        Готов стать настоящим сталкером, не выходя из дома? Отправляйся в мрачные, но завораживающие зоны Чернобыля, чтобы найти артефакты прошлого, редкие реликвии и… то, что лучше бы оставалось под землёй.
+                        Готов стать настоящим сталкером, не выходя из дома? Отправляйся в мрачные, но завораживающие
+                        зоны Чернобыля, чтобы найти артефакты прошлого, редкие реликвии и… то, что лучше бы оставалось
+                        под землёй.
                     </p>
                     <div class="game-links">
-                        <a href="https://yandex.ru/games/app/418696?utm_source=app_page" class="store-link">ЯНДЕКС ИГРЫ</a>
-                        <a href="https://www.rustore.ru/catalog/app/com.madsquid.chernometal" class="store-link">RU STORE</a>
-                   
+                        <a href="https://yandex.ru/games/app/418696?utm_source=app_page" class="store-link">ЯНДЕКС
+                            ИГРЫ</a>
+                        <a href="https://www.rustore.ru/catalog/app/com.madsquid.chernometal" class="store-link">RU
+                            STORE</a>
+
                     </div>
                 </div>
 
@@ -425,11 +463,16 @@
                     <div class="game-image"></div>
                     <h3 class="game-title">Мэр города ужасов</h3>
                     <p class="game-description">
-                      Вы - мэр города, охваченного туманом и тайнами. Каждый ваш выбор влияет на бюджет, разум, население и мистические силы. Следите за балансом, общайтесь с эксцентричными жителями, противостойте безумию, культистам и странным явлениям. Поддерживайте порядок - или уступите хаосу. Город ждёт решений… но способны ли вы сохранить человеческий облик, когда щупальца подбираются всё ближе?
+                        Вы - мэр города, охваченного туманом и тайнами. Каждый ваш выбор влияет на бюджет, разум,
+                        население и мистические силы. Следите за балансом, общайтесь с эксцентричными жителями,
+                        противостойте безумию, культистам и странным явлениям. Поддерживайте порядок - или уступите
+                        хаосу. Город ждёт решений… но способны ли вы сохранить человеческий облик, когда щупальца
+                        подбираются всё ближе?
                     </p>
                     <div class="game-links">
-                        <a href="https://yandex.ru/games/app/432279?utm_source=app_page" class="store-link">ЯНДЕКС ИГРЫ</a>
-                      
+                        <a href="https://yandex.ru/games/app/432279?utm_source=app_page" class="store-link">ЯНДЕКС
+                            ИГРЫ</a>
+
                     </div>
                 </div>
             </div>
@@ -441,11 +484,11 @@
             <div class="footer-content">
                 <div class="contact-info">
                     <h3>// СВЯЗЬ</h3>
-                    <p>tg @boo1042</p>
+                    <p><a href="https://t.me/boo1042" class="telegram-link">Ссылка на мой Telegram</a></p>
                 </div>
-                
-               
-                
+
+
+
                 <div class="copyright">
                     <p>&copy; 2025 MFBURN. All rights reserved. // SYSTEM_ONLINE</p>
                 </div>
@@ -459,7 +502,7 @@
             const logo = document.querySelector('.logo');
             const scrolled = window.pageYOffset;
             const rate = scrolled * -0.5;
-            
+
             if (scrolled > 100) {
                 logo.style.transform = `translateY(${rate}px)`;
                 logo.style.filter = 'hue-rotate(' + scrolled * 0.5 + 'deg)';
@@ -470,9 +513,9 @@
         function randomGlitch() {
             const cards = document.querySelectorAll('.game-card');
             const randomCard = cards[Math.floor(Math.random() * cards.length)];
-            
+
             randomCard.style.filter = 'hue-rotate(' + Math.random() * 360 + 'deg) saturate(2)';
-            
+
             setTimeout(() => {
                 randomCard.style.filter = 'none';
             }, 100);
@@ -516,4 +559,5 @@
         });
     </script>
 </body>
+
 </html>
